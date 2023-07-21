@@ -1,5 +1,5 @@
 # cfPython_Achievement1
-#### _Note to viewer: The majority of this project is using Windows and Command Prompt_
+ _Note to viewer: The majority of this project is using Windows and Command Prompt_
 
 ## Table of Contents
 

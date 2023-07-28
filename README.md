@@ -1,15 +1,17 @@
 # cfPython_Achievement1
  _Note to viewer: The majority of this project is using Windows and Command Prompt_
 
+<!--
 ## Table of Contents
 
 1. [Exercise 1.1](#task1)
 2. [Exercise 1.2](#task2)
 
+-->
 
-## Exercise 1.1 <a name="task1"></a>
-### Getting Started with Python
-
+<details>
+<summary><h2>Exercise 1.1: Getting Started with Python <a name="task1"></a></h2></summary>
+ 
 #### Install Python
 Check if you already have Python installed by entering `python --version` in your terminal. If you do not already have Python installed, follow the instructions provided at https://www.python.org/downloads/. _this project was made using **Python 3.8.7**_
 
@@ -56,11 +58,10 @@ C:\Users\username> mkvirtualenv <your_environment_name>_copy
 ```
 ![Step 5](./Exercise_1.1/step_5.png)
 
+</details>
 
-
-
-## Exercise 1.2 <a name="task2"></a>
-### Data Types
+<details>
+<summary><h2>Exercise 1.2: Data Types<a name="task2"></a></h2></summary>
 
 First, open an iPython shell in your working environment.
 
@@ -94,4 +95,26 @@ Add the rest of the dictionaries to your all_recipes list
 Once you have all your recipes added to the list, print out each recipe's ingredients as five different lists.
 
 ![Step 5](./Exercise_1.2/step_5.png)
+
+</details>
+
+<details>
+<summary><h2>Exercise 1.3: Operators & Functions</h2></summary>
+
+### Using operators and functions to display user inputs
+
+Step 1: open a code editor. This example uses Visual Studio Code.
+Step 2: create two empty lists: one called `recipes_list`, and one called `ingredients_list`
+
+![Step 1 and 2](./Exercise_1.3/step_1and2.png)
+
+
+
+
+
+
+
+
+
+
 

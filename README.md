@@ -1,7 +1,8 @@
 # cfPython_Achievement1
+<!--
  _Note to viewer: The majority of this project is using Windows and Command Prompt_
 
-<!--
+
 ## Table of Contents
 
 1. [Exercise 1.1](#task1)
@@ -103,18 +104,68 @@ Once you have all your recipes added to the list, print out each recipe's ingred
 
 ### Using operators and functions to display user inputs
 
-Step 1: open a code editor. This example uses Visual Studio Code.
-Step 2: create two empty lists: one called `recipes_list`, and one called `ingredients_list`
+_Step 1_
+Open a code editor. This example uses Visual Studio Code.
+
+_Step 2_
+Create two empty lists: one called `recipes_list`, and one called `ingredients_list`
 
 ![Step 1 and 2](./Exercise_1.3/step_1and2.png)
 
 
+_Step 3_
+Define a function called `take_recipe`
+This function should call for several user inputs: a recipe’s name (string), the amount of time to cook the recipe (integer), and a list of ingredients that the recipe will call for.
+Next, create a dictionary called `recipe` that will store these variables as key/value pairs.
+
+![Step 3](./Exercise_1.3/step_3.png)
 
 
+_Step 4_
+Prompt the user to input how many recipes they want to add. This integer will be stored to `n`.
+
+![Step 4](./Exercise_1.3/step_4.png)
 
 
+_Step 5_
+Create a *for loop* that will iterate through the number of recipes indicated by the user in step 4. This for loop will check if an ingredient entered by the user is already in the ingredients_list. If it is not, the new ingredient will be appended to the ingredients_list. Each new recipe is appended to the recipes_list.
+
+![Step 5](./Exercise_1.3/step_5.png)
 
 
+_Step 6, Part 1_
+Create a *for loop* that will check boolean logic of each recipe according to if/and statements. Four different scenarios are checked to determine the recipe’s level of difficulty.
+`if` the recipe’s cooking time is _less than 10_ minutes `and` the length of ingredients in the list is _less than 4_, set difficulty to *Easy*
+`if` the recipe’s cooking time is _less than 10_ minutes `and` the length of ingredients in the list is _greater than or equal to 4_, set difficulty to *Medium*
+`if` the recipe’s cooking time is _greater than or equal to 10_ minutes `and` the length of ingredients in the list is _less than 4_, set difficulty to *Intermediate*
+`if` the recipe’s cooking time is _greater than or equal to 10_ minutes `and` the length of ingredients in the list is _greater than 4_, set difficulty to *Hard*
+
+![Step 6.1](./Exercise_1.3/step_6.1.png)
+
+_Step 6, Part 2_
+Create a for loop that will iterate through each recipe in the recipes_list, and print the recipe’s name, the cooking time, the ingredients needed (as another for loop to loop through the list of ingredients), and the level of difficulty.
+
+![Step 6.2](./Exercise_1.3/step_6.2.png)
+
+
+_Step 7_
+Create a function called `display_ingredients` that will show all the ingredients available across all recipes. The list needs to be alphabetized, which can be done using Python’s built-in `sort()`.
+The function then will loop through the alphabetized list of ingredients and print each one, once the function is called using `display_ingredients()`.
+
+![Step 7](./Exercise_1.3/step_7.png)
+
+
+####Check your work
+In Visual Studio Code, press the “play button” in the top right-hand corner of your screen. This will open up your terminal and begin prompting for user input. This will be a great place to double check for any errors in your code.
+
+![Check your work 1](./Exercise_1.3/check_work_1.png)
+
+Once you’ve input everything it asks for, your results will show immediately.
+Play with formatting to make your output easier to read.
+
+_example:_
+
+![Check your work 2](./Exercise_1.3/check_work_2.png)
 
 
 

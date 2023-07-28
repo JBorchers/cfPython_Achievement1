@@ -13,14 +13,37 @@ Reflection Questions
 Write your script here. (Hint: remember what you learned about indents!)
 
 
+def travel_destination():
+  destination = input("Where to?")
 
+  if destination == "Bali":
+    print("Enjoy your stay in Bali!")
+  elif destination == "Banff":
+    print("Enjoy your stay in Banff!")
+  elif destination == "Cairo":
+    print("Enjoy your stay in Cairo!")
 
+  else:
+    print("Oops, that destination is not currently available.")
 
+travel_destination()
 
 
 
 2. Imagine you’re at a job interview for a Python developer role. The interviewer says “Explain logical operators in Python”. Draft how you would respond.
 
+Logical operators are a way to check if values are truthy or falsy. They can also be considered "Boolean operators", that evaluate if conditions are true or false using "and", "or", and "not". These operators can be used to interpret if certain conditions are met before proceeding with the rest of the function. A way to visualize this is with a "truth table", which can show which combination of "true" or "false" conditions lead to a "true" or "false" result.
+
+
+
 3. What are functions in Python? When and why are they useful?
 
+Functions are a set of instructions that your script uses to do something with your code for some purpose (to put if vaguely as the question itself is pretty open-ended). Functions are useful as they can be reusable throughout your code, where more functions or operators can call on them in multiple other places. Functions can also save space and time while coding as you can plug in different values at different points to generate results. For example, looking at our recipe app, the same function can be called to make a recipe, but each time the recipe would use different ingredients (value inputs).
+
+
+
 4. In the section for Exercise 1 in this Learning Journal, you were asked in question 3 to set some goals for yourself while you complete this course. In preparation for your next mentor call, make some notes on how you’ve progressed towards your goals so far.
+
+It's still fairly early in the course, but I have accomplished parts of my goals so far:
+  - I've improved some of how I work in my current job, knowing now how to quickly test parts of a python script by using iPython
+  - In this exercise, I've been able to write staple Python functions from scratch

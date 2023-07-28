@@ -2,7 +2,7 @@ Exercise 1.3: Functions and Other Operations in Python
 
 
 Reflection Questions
-
+<pre>
 1. In this Exercise, you learned how to use if-elif-else statements to run different tasks based on conditions that you define. Now practice that skill by writing a script for a simple travel app using an if-elif-else statement for the following situation: 
 
 ●	The script should ask the user where they want to travel. 
@@ -47,3 +47,5 @@ Functions are a set of instructions that your script uses to do something with y
 It's still fairly early in the course, but I have accomplished parts of my goals so far:
   - I've improved some of how I work in my current job, knowing now how to quickly test parts of a python script by using iPython
   - In this exercise, I've been able to write staple Python functions from scratch
+
+</pre>

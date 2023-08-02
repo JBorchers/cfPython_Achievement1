@@ -68,8 +68,8 @@ else:
 finally:
     recipes_list = data["recipes_list"]
     all_ingredients = data["all_ingredients"]
-    print("You're ready to add more recipes!\n \n----------------------\n")
-    # print("----------------------")
+    print("You're ready to add more recipes!")
+    print("----------------------")
 
 
 n = int(input(" - How many recipes are we cooking up? "))

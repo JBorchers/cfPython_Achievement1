@@ -61,6 +61,9 @@ C:\Users\username> mkvirtualenv <your_environment_name>_copy
 
 </details>
 
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+
 <details>
 <summary><h2>Exercise 1.2: Data Types<a name="task2"></a></h2></summary>
 
@@ -98,6 +101,10 @@ Once you have all your recipes added to the list, print out each recipe's ingred
 ![Step 5](./Exercise_1.2/step_5.png)
 
 </details>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+
 
 <details>
 <summary><h2>Exercise 1.3: Operators & Functions</h2></summary>
@@ -166,6 +173,79 @@ Play with formatting to make your output easier to read.
 _example:_
 
 ![Check your work 2](./Exercise_1.3/check_work_2.png)
+
+</details>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+
+<details>
+<summary><h2>Exercise 1.4: File Handling</h2></summary>
+
+### Create `recipe_input.py`
+
+This script will load and store data into a binary file based on user input.<br>
+Later, the stored data will be accessed by another script: `recipe_search.py`
+
+ _Step 1_<br>
+`import pickle` in order to work with binary files
+
+![Step 1](./Exercise_1.4/part1_step1.png)
+
+
+_Step 2_<br>
+Define a function called `take_recipe()`<br>
+This is where user inputs will put together the recipes.
+Recipes should include:
+1. a recipe name
+2. cooking time
+3. necessary ingredients
+4. a level of difficulty (to be defined in another function)
+
+![Step 2](./Exercise_1.4/part1_step2.png)
+
+
+_Step 3_<br>
+Level of difficulty is first calculated with another function, called `calc_difficulty`<br>
+Difficulty is identified by the `cooking_time` and number of `ingredients`
+The levels are returned as `Easy`, `Medium`, `Intermediate`, or `Hard`
+
+![Step 3](./Exercise_1.4/part1_step3.png)
+
+All of these values should be added to a dictionary for later use.
+
+
+_Step 4_<br>
+Now we begin with the main code.
+Define a `try-except-else-finally` block
+1. `Try` a block of code where an error might occur. In this case, we will `try` opening a binary file named by the user, and load contents to it using the `pickle` module. 
+
+![Step 4](./Exercise_1.4/part1_step4a.png)
+
+2. If there is no file by the name the user input, the `except` block will display a `FileNotFoundError` message to the user. The script will create a file named with what the user input.
+3. Other errors are handled with another `except` block
+4. `Finally` the script extracts the values from the dictionary into two lists: `recipes_list` and `all_ingredients`
+
+![Step 4](./Exercise_1.4/part1_step4b.png)
+
+
+_Step 5_<br>
+A for loop will loop through the number of recipes that the user enters and call the `take_recipe()` function.
+It will add each new recipe to the `recipes_list` dictionary. It will also loop through existing ingredients in the `all_ingredients` dictionary and will add any new ingredients that do not already exist.
+
+![Step 5](./Exercise_1.4/part1_step5.png)
+
+
+_Step 6_<br>
+The updated `recipes_list` and `all_ingredients` are added to a dictionary named `data`
+
+![Step 6](./Exercise_1.4/part1_step6.png)
+
+_Step 7_<br>
+Use the pickle module to write the updated data to the user-defined file
+![Step 7](./Exercise_1.4/part1_step7.png)
+
+
 
 
 

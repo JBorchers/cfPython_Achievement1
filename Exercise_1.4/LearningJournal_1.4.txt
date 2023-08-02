@@ -37,3 +37,6 @@ A try-except block can 'try' a block of code where there could be a probable err
 
 5. You’re now more than halfway through Achievement 1! Take a moment to reflect on your learning in the course so far. How is it going? What’s something you’re proud of so far? Is there something you’re struggling with? What do you need more practice with? Feel free to use these notes to guide your next mentor call. 
 
+So far I think everything is going really well! I'm enjoying the content and feel like I'm learning a lot. It's getting me excited about potentially creating different apps with Python.
+Right now I might be struggling a bit with time management. I tend to spend a lot of time trying to format things and make them appear a certain way, but I also recognize that Achievement 1 might not need so much focus on appearance.
+I will say I could use some more practice with writing common functions - similar to those that might be part of an interview process at some point.

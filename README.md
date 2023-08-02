@@ -181,8 +181,8 @@ _example:_
 
 <details>
 <summary><h2>Exercise 1.4: File Handling</h2></summary>
-
-### Create `recipe_input.py`
+<details>
+<summary><h4>Part 1: Create <code>recipe_input.py</code></h4></summary>
 
 This script will load and store data into a binary file based on user input.<br>
 Later, the stored data will be accessed by another script: `recipe_search.py`
@@ -245,7 +245,101 @@ _Step 7_<br>
 Use the pickle module to write the updated data to the user-defined file
 ![Step 7](./Exercise_1.4/part1_step7.png)
 
+</details>
+<details>
+<summary><h4>Part 2: Create <code>recipe_search.py</code></h4></summary>
 
+This script will read the saved data in the binary file that `recipe_input.py` wrote to.
+With more user inputs, `all_ingredients` is displayed to the user after they enter the binary file's name.
+Then the user can select a specific ingredient and the script will display any recipe that has that particular ingredient stored.
+
+_Step 1_<br>
+Import the `pickle` module
+
+![Step 1](./Exercise_1.4/part2_step1.png)
+
+
+_Step 2_<br>
+Define a function called `display_recipe()`
+This function will take each recipe as an argument and print all of its attributes: _Recipe Name_, _Cooking Time_, _Ingredients_, and _Difficulty_.
+
+![Step 2](./Exercise_1.4/part2_step2.png)
+
+
+_Step 3_<br>
+Define another function called `search_ingredient()`
+This function should take a dictionary called `data` as an argument. It will:
+1. print all available ingredients under a key `all_ingredients`<br>
+Each ingredient is shown with a number; use `enumerate()` to take the index of each ingredient
+2. define a `try` block<br>
+the user will `try` to pick a number from the list, and if it exists, it is stored in `ingredient_searched`
+3. the `except` clause warns the user if the input is incorrect
+4. an `else` clause is added to display any recipe in `recipes_list` that contains the searched ingredient
+
+![Step 3](./Exercise_1.4/part2_step3.png)
+
+
+_Step 4_<br>
+Prompt the user to input the name of the binary file where recipe_input.py wrote recipe data to.
+
+![Step 4](./Exercise_1.4/part2_step4.png)
+
+
+_Step 5_<br>
+A `try` block attempts to open the file. If it successfully opens the file, it will extract the `data` using the `pickel` module
+
+![Step 5](./Exercise_1.4/part2_step5.png)
+
+
+_Step 6_<br>
+Add an `except` clause for if the file is not found, using `except FileNotFoundError:`
+
+![Step 6](./Exercise_1.4/part2_step6.png)
+
+
+_Step 7_<br>
+If the `try` block doesn’t encounter any errors, and `else` block will call the `search_ingredient` function and pass data into it as an argument.
+
+![Step 7](./Exercise_1.4/part2_step7.png)
+
+
+</details>
+<details>
+<summary><h4>Testing</h4></summary>
+
+<h4><code>recipe_input.py</code></h4>
+
+The script prompts the user to enter a filename where they want their recipes stored.
+If the file exists, the script uses that file; however, if the file does not exist, a new file is created:
+
+![Testing_1.1](./Exercise_1.4/part1_testing1.png)
+
+The user then enters:
+1.	how many recipes they want to add
+2.	the name of the recipe
+3.	the cooking time for the recipe
+4.	and the ingredients needed
+
+![Testing_1.2](./Exercise_1.4/part1_testing2.png)
+
+Once completed, data is added to a binary file 
+
+![Testing_1.3](./Exercise_1.4/part1_testing3.png)
+
+<h4><code>recipe_search.py</code></h4>
+
+This script starts by asking the user which file they added their recipe to.
+The script searches this file and lists `all_ingredients`
+
+![Testing_2.1](./Exercise_1.4/part2_testing1.png)
+
+Next it prompts the user to enter a number that’s next to an ingredient that’s been listed. Once entered, the script loads the recipe that’s found to include that ingredient, and loads the recipe to be displayed via the `pickle` method.
+
+![Testing_2.2](./Exercise_1.4/part2_testing2.png)
+
+</details>
+</details>
+</details>
 
 
 

@@ -74,4 +74,3 @@ def display_ingredients():
 
 # call the function
 display_ingredients()
-

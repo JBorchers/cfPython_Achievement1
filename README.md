@@ -190,7 +190,8 @@ Later, the stored data will be accessed by another script: `recipe_search.py`
  _Step 1_<br>
 `import pickle` in order to work with binary files
 
-![Step 1](./Exercise_1.4/part1_step1.png)
+<!--![Step 1](./Exercise_1.4/part1_step1.png)-->
+<img src="./Exercise_1.4/part1_step1.png" alt="Step 1" width="50%">
 
 
 _Step 2_<br>
@@ -202,7 +203,8 @@ Recipes should include:
 3. necessary ingredients
 4. a level of difficulty (to be defined in another function)
 
-![Step 2](./Exercise_1.4/part1_step2.png)
+<!--![Step 2](./Exercise_1.4/part1_step2.png)-->
+<img src="./Exercise_1.4/part1_step2.png" alt="Step 2" width="50%">
 
 
 _Step 3_<br>
@@ -210,7 +212,8 @@ Level of difficulty is first calculated with another function, called `calc_diff
 Difficulty is identified by the `cooking_time` and number of `ingredients`
 The levels are returned as `Easy`, `Medium`, `Intermediate`, or `Hard`
 
-![Step 3](./Exercise_1.4/part1_step3.png)
+<!--![Step 3](./Exercise_1.4/part1_step3.png)-->
+<img src="./Exercise_1.4/part1_step3.png" alt="Step 3" width="50%">
 
 All of these values should be added to a dictionary for later use.
 
@@ -220,30 +223,37 @@ Now we begin with the main code.
 Define a `try-except-else-finally` block
 1. `Try` a block of code where an error might occur. In this case, we will `try` opening a binary file named by the user, and load contents to it using the `pickle` module. 
 
-![Step 4](./Exercise_1.4/part1_step4a.png)
+<!--![Step 4](./Exercise_1.4/part1_step4a.png)-->
+<img src="./Exercise_1.4/part1_step4a.png" alt="Step 4.1" width="50%">
 
 2. If there is no file by the name the user input, the `except` block will display a `FileNotFoundError` message to the user. The script will create a file named with what the user input.
 3. Other errors are handled with another `except` block
 4. `Finally` the script extracts the values from the dictionary into two lists: `recipes_list` and `all_ingredients`
 
-![Step 4](./Exercise_1.4/part1_step4b.png)
+<!--![Step 4](./Exercise_1.4/part1_step4b.png)-->
+<img src="./Exercise_1.4/part1_step4b.png" alt="Step 4.2" width="50%">
 
 
 _Step 5_<br>
 A for loop will loop through the number of recipes that the user enters and call the `take_recipe()` function.
 It will add each new recipe to the `recipes_list` dictionary. It will also loop through existing ingredients in the `all_ingredients` dictionary and will add any new ingredients that do not already exist.
 
-![Step 5](./Exercise_1.4/part1_step5.png)
+<!--![Step 5](./Exercise_1.4/part1_step5.png)-->
+<img src="./Exercise_1.4/part1_step5.png" alt="Step 5" width="50%">
 
 
 _Step 6_<br>
 The updated `recipes_list` and `all_ingredients` are added to a dictionary named `data`
 
-![Step 6](./Exercise_1.4/part1_step6.png)
+<!--![Step 6](./Exercise_1.4/part1_step6.png)-->
+<img src="./Exercise_1.4/part1_step6.png" alt="Step 6" width="50%">
 
 _Step 7_<br>
 Use the pickle module to write the updated data to the user-defined file
-![Step 7](./Exercise_1.4/part1_step7.png)
+
+<!--![Step 7](./Exercise_1.4/part1_step7.png)-->
+<img src="./Exercise_1.4/part1_step7.png" alt="Step 7" width="50%">
+
 
 </details>
 <details>
@@ -256,14 +266,16 @@ Then the user can select a specific ingredient and the script will display any r
 _Step 1_<br>
 Import the `pickle` module
 
-![Step 1](./Exercise_1.4/part2_step1.png)
+<!--![Step 1](./Exercise_1.4/part2_step1.png)-->
+<img src="./Exercise_1.4/part2_step1.png" alt="Step 1" width="50%">
 
 
 _Step 2_<br>
 Define a function called `display_recipe()`
 This function will take each recipe as an argument and print all of its attributes: _Recipe Name_, _Cooking Time_, _Ingredients_, and _Difficulty_.
 
-![Step 2](./Exercise_1.4/part2_step2.png)
+<!--![Step 2](./Exercise_1.4/part2_step2.png)-->
+<img src="./Exercise_1.4/part2_step2.png" alt="Step 2" width="50%">
 
 
 _Step 3_<br>
@@ -276,31 +288,36 @@ the user will `try` to pick a number from the list, and if it exists, it is stor
 3. the `except` clause warns the user if the input is incorrect
 4. an `else` clause is added to display any recipe in `recipes_list` that contains the searched ingredient
 
-![Step 3](./Exercise_1.4/part2_step3.png)
+<!--![Step 3](./Exercise_1.4/part2_step3.png)-->
+<img src="./Exercise_1.4/part2_step3.png" alt="Step 3" width="50%">
 
 
 _Step 4_<br>
 Prompt the user to input the name of the binary file where recipe_input.py wrote recipe data to.
 
-![Step 4](./Exercise_1.4/part2_step4.png)
+<!--![Step 4](./Exercise_1.4/part2_step4.png)-->
+<img src="./Exercise_1.4/part2_step4.png" alt="Step 4" width="50%">
 
 
 _Step 5_<br>
 A `try` block attempts to open the file. If it successfully opens the file, it will extract the `data` using the `pickel` module
 
-![Step 5](./Exercise_1.4/part2_step5.png)
+<!--![Step 5](./Exercise_1.4/part2_step5.png)-->
+<img src="./Exercise_1.4/part2_step5.png" alt="Step 5" width="50%">
 
 
 _Step 6_<br>
 Add an `except` clause for if the file is not found, using `except FileNotFoundError:`
 
-![Step 6](./Exercise_1.4/part2_step6.png)
+<!--![Step 6](./Exercise_1.4/part2_step6.png)-->
+<img src="./Exercise_1.4/part2_step6.png" alt="Step 6" width="50%">
 
 
 _Step 7_<br>
 If the `try` block doesn’t encounter any errors, and `else` block will call the `search_ingredient` function and pass data into it as an argument.
 
-![Step 7](./Exercise_1.4/part2_step7.png)
+<!--![Step 7](./Exercise_1.4/part2_step7.png)-->
+<img src="./Exercise_1.4/part2_step7.png" alt="Step 7" width="50%">
 
 
 </details>
@@ -312,7 +329,8 @@ If the `try` block doesn’t encounter any errors, and `else` block will call th
 The script prompts the user to enter a filename where they want their recipes stored.
 If the file exists, the script uses that file; however, if the file does not exist, a new file is created:
 
-![Testing_1.1](./Exercise_1.4/part1_testing1.png)
+<!--![Testing_1.1](./Exercise_1.4/part1_testing1.png)-->
+<img src="./Exercise_1.4/part1_testing1.png" alt="Testing_1.1" width="50%">
 
 The user then enters:
 1.	how many recipes they want to add
@@ -320,22 +338,25 @@ The user then enters:
 3.	the cooking time for the recipe
 4.	and the ingredients needed
 
-![Testing_1.2](./Exercise_1.4/part1_testing2.png)
+<!--![Testing_1.2](./Exercise_1.4/part1_testing2.png)-->
+<img src="./Exercise_1.4/part1_testing2.png" alt="Testing_1.2" width="50%">
 
 Once completed, data is added to a binary file 
 
-![Testing_1.3](./Exercise_1.4/part1_testing3.png)
+<!--![Testing_1.3](./Exercise_1.4/part1_testing3.png) -->
+<img src="./Exercise_1.4/part1_testing3.png" alt="Testing_1.3" width="50%">
 
 <h4><code>recipe_search.py</code></h4>
 
 This script starts by asking the user which file they added their recipe to.
 The script searches this file and lists `all_ingredients`
 
-![Testing_2.1](./Exercise_1.4/part2_testing1.png)
+<!--![Testing_2.1](./Exercise_1.4/part2_testing1.png)-->
+<img src="./Exercise_1.4/part2_testing1.png" alt="Testing_2.1" width="50%">
 
 Next it prompts the user to enter a number that’s next to an ingredient that’s been listed. Once entered, the script loads the recipe that’s found to include that ingredient, and loads the recipe to be displayed via the `pickle` method.
 
-![Testing_2.2](./Exercise_1.4/part2_testing2.png)
+<img src="./Exercise_1.4/part2_testing2.png" alt="Testing_2.2" width="50%">
 
 </details>
 </details>

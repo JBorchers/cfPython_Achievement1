@@ -47,3 +47,4 @@ Functions are a set of instructions that your script uses to do something with y
 It's still fairly early in the course, but I have accomplished parts of my goals so far:
   - I've improved some of how I work in my current job, knowing now how to quickly test parts of a python script by using iPython
   - In this exercise, I've been able to write staple Python functions from scratch
+

@@ -449,7 +449,8 @@ Try the `recipe_search()` method to search for recipes that contain specified in
 
 Run the Python script in the terrminal.
 The output should list all of the availble recipe objects in their entirety, and then show all recipe objects that contain the ingredient that is searched for.
-<img src="./Exercise_1.5/testing_list_all_recipes.png" width="50%">
+
+<img src="./Exercise_1.5/testing_list_all_recipes.png" width="30%">
 
 <img src="./Exercise_1.5/testing_search_items.png" width="50%">
 

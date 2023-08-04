@@ -9,7 +9,7 @@ def calc_difficulty(cooking_time, ingredients):
         difficulty = "Medium"
     elif cooking_time >= 10 and len(ingredients) < 4:
         difficulty = "Intermediate"
-    elif cooking_time >= 10 and len("ingredients") > 4:
+    elif cooking_time >= 10 and len(ingredients) > 4:
         difficulty = "Hard"
 
     return difficulty

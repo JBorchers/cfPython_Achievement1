@@ -1,0 +1,38 @@
+Exercise 1.5: Object-Oriented Programming in Python
+
+
+Reflection Questions
+
+1.	In your own words, what is object-oriented programming? What are the benefits of OOP?
+
+OOP is a way of organizing code in a readable and logical way. It's a programming model where code is organized into objects that are contained in a class. The focus is to create reusable and modular code.
+
+OOP is beneficial is it helps to keep code non-repetitive, non-redundant, and efficient. It follows DRY principles, meaning "Don't Repeat Yourself".
+
+
+2.	What are objects and classes in Python? Come up with a real-world example to illustrate how objects and classes work.
+
+`Objects` are containers that hold attributes (data) and methods (attributes). The attributes in an object can be any data type. Objects are an instance of a class, which is the template that defines the structure of the objects, what they do, and how they interact with each other.
+
+One example could be a fitness tracker app. You can create a FitnessTracker class, which could have attributes like user_name, user_weight_, and step_goal.
+Individual objects (like tracker1 and tracker2) can be created from this class template. For example:
+tracker1 = FitnessTracker("JohnDoe", 185, 10000)
+tracker2 = FitnessTracker("JaneDoe", 142, 8000)
+
+Each of these is an instance of the FitnessTracker class.
+
+
+3.	In your own words, write brief explanations of the following OOP concepts; 100 to 200 words per method is fine. 
+
+-Inheritance
+    Inheritance allows a class to "inherit" attributes and methods from another class (a "subclass" inheriting from a "superclass")
+
+-Polymorphism	
+    A concept that allows objects of different subclasses to be treated as objects of a superclass.
+    The goal here is to make code generic and non-repetitive. Methods/functions are able to work on objects of multiple classes that share the same behavior.
+
+-Operator Overloading	
+    A feature of OOP that allows you to define custom behaviors for standard operators (+, -, *, /, etc.).
+    Operators can behave differently based on different datatypes. For example, `+` acts as an addition operator, or a concatenate operator. A TypeError would be thrown if you tried to use the `+` operator on a custom class.
+    Operator overloading can avoid this by defining what you want the operator to do when it's applied to the objects of your class.
+

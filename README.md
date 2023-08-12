@@ -450,9 +450,223 @@ Try the `recipe_search()` method to search for recipes that contain specified in
 Run the Python script in the terrminal.
 The output should list all of the availble recipe objects in their entirety, and then show all recipe objects that contain the ingredient that is searched for.
 
-<img src="./Exercise_1.5/testing_list_all_recipes.png" width="30%">
+</details>
 
-<img src="./Exercise_1.5/testing_search_items.png" width="50%">
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+
+<details>
+<summary><h2>Exercise 1.6: Databases</h2></summary>
+
+<h3>Part 1: Create and Connect Database</h3>
+
+<br>_Step 1_<br>
+*	pip install mysql-connector-python
+*	open ipython shell, and type: import mysql.connector
+
+<img src="./Exercise_1.6/part1_step1.png" width="50%">
+
+
+<br>_Step 2_<br>
+*	initialize a connection object called `conn`
+*	This object acts as a connection between the Python session and the MySQL server
+
+<img src="./Exercise_1.6/part1_step2.png" width="50%">
+
+
+<br>_Step 3_<br>
+*	Initialize a `cursor`
+*	This will allow you to perform operations on the database with SQL queries
+
+<img src="./Exercise_1.6/part1_step3.png" width="50%">
+
+
+<br>_Step 4_<br>
+*	Create a database called `task_database`
+
+<img src="./Exercise_1.6/part1_step4.png" width="50%">
+
+
+<br>_Step 5_<br>
+*	Connect to the newly created database with the `USE <database>` query
+
+<img src="./Exercise_1.6/part1_step5.png" width="50%">
+
+
+<br>_Step 6_<br>
+*	Create a table called `Recipes`
+*	`id`: integer type
+*	`name`: string type with a limit of 50 characters. Used to store the name of the recipe.
+*	`ingredients`: string type with a limit of 255 characters. Used to store types of ingredients.
+*	`cooking_time`: integer type. Used to store recipe cooking time in minutes.
+*	`difficulty`: string type with a limit of 20 characters. Used to story level of difficulty (Easy, Medium, Intermediate, Hard)
+*	To view the entire table, open a mysql Command Line Client, select your database, and type DESCRIBE <table>
+
+<img src="./Exercise_1.6/part1_step6.png" width="50%">
+
+
+<h3>Part 2: Create a Main Menu</h3>
+
+<br>_Step 1_<br>
+* Implement a “main menu”. Menu should include 4 options: create recipe; search for recipe; update recipe; and delete recipe
+
+<img src="./Exercise_1.6/part2_step1.png" width="50%">
+
+<br>_Step 2_<br>
+
+<img src="./Exercise_1.6/part2_step2.png" width="50%">
+
+<br>_Step 3_<br>
+
+<img src="./Exercise_1.6/part2_step3.png" width="50%">
+
+<br>_Step 4_<br>
+
+<img src="./Exercise_1.6/part2_step4.png" width="50%">
+
+
+
+<h3>Part 3: Create a Recipe with `create_recipe()`</h3>
+
+<br>_Step 1_<br>
+*	Collect: `name`, `cooking_time`, and `ingredients`
+  
+<img src="./Exercise_1.6/part3_step1.png" width="50%">
+
+
+<br>_Step 2_<br>
+* Call the `calc_difficulty()` function
+  
+<img src="./Exercise_1.6/part3_step2.png" width="50%">
+
+
+<br>_Step 3_<br>
+* Connect information to a SQL query
+  
+<img src="./Exercise_1.6/part3_step3.png" width="50%">
+
+
+<br>_Step 4_<br>
+* Execute query and commit changes
+  
+<img src="./Exercise_1.6/part3_step4.png" width="50%">
+
+
+<h3>Part 4: Search for Recipe with `search_recipe()`</h3>
+
+<br>_Step 1_<br>
+* Run SQL queries on the database to access recipes based on ingredients selected by user.
+* `SELECT` ingredients column
+
+<img src="./Exercise_1.6/part4_step1.png" width="50%">
+
+
+<br>_Step 2_<br>
+* Add each ingredient to a new list called `all_ingredients`
+  
+<img src="./Exercise_1.6/part4_step2.png" width="50%">
+
+
+<br>_Step 3_<br>
+* Display all ingredients
+
+<img src="./Exercise_1.6/part4_step3.png" width="50%">
+
+
+<br>_Step 4_<br>
+* `SELECT` ingredients column `WHERE` a specific search pattern (ex: name of ingredient) occurs
+  
+<img src="./Exercise_1.6/part4_step4.png" width="50%">
+
+
+
+<h3>Part 5: Update Recipe with `update_recipe`</h3>
+
+<br>_Step 1_<br>
+*	Fetch all recipes and display them to the user
+*	User chooses a recipe to be updated by selecting the recipe’s corresponding id
+
+<img src="./Exercise_1.6/part5_step1.png" width="50%">
+
+
+<br>_Step 2_<br>
+* User selects the column that needs to be updated. The script collects the new value from the user.
+<img src="./Exercise_1.6/part5_step2.png" width="50%">
+
+
+<br>_Step 3_<br>
+*	Build query in the form of a string to update the table for given `id`, column, and updated value.
+*	A separate query calculates a new level of difficulty if either `ingredients` or `cooking_time` are modified
+  
+<img src="./Exercise_1.6/part5_step3.png" width="50%">
+
+
+<br>_Step 4_<br>
+* Execute queries on the Recipes table and commit changes
+  
+<img src="./Exercise_1.6/part5_step4.png" width="50%">
+
+
+<h3>Part 6: Delete a Recipe with `delete_recipe()</h3>
+
+<br>_Step 1_<br>
+*	Display all recipes in the Recipe table to the user. User selects a recipe to be deleted by id number.
+  
+<img src="./Exercise_1.6/part6_step1.png" width="50%">
+
+
+<br>_Step 2 and 3_<br>
+*	SQL query `DELETE`s row, identified by previous step
+* Execute query and commit changes
+
+<img src="./Exercise_1.6/part6_step2and3.png" width="50%">
+
+
+<h3>Part 7: Testing the Script</h3>
+
+<br>_Step 1_<br>
+*	Ensure MySQL Server is running and execute the script
+
+<img src="./Exercise_1.6/part7_step1.png" width="50%">
+
+
+<br>_Step 2_<br>
+* Create a new recipe
+
+<img src="./Exercise_1.6/part7_step2.png" width="50%">
+
+
+<br>_Step 3_<br>
+* Search for a recipe based on ingredient
+
+<img src="./Exercise_1.6/part7_step3.png" width="50%">
+
+
+<br>_Step 4_<br>
+* Update recipes
+
+<img src="./Exercise_1.6/part7_step4a.png" width="50%">
+<img src="./Exercise_1.6/part7_step4b.png" width="50%">
+
+
+<br>_Step 5_<br>
+* Delete recipe
+
+<img src="./Exercise_1.6/part7_step5.png" width="50%">
+
+
+<br>_Step 6_<br>
+* Exit the script
+
+<img src="./Exercise_1.6/part7_step6.png" width="50%">
+
+
+<br>_Final Results After Modification_<br>
+
+<img src="./Exercise_1.6/part7_Final_Results.png" width="50%">
+
+
 
 
 

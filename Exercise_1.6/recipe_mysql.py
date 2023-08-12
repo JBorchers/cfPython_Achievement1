@@ -187,7 +187,7 @@ def update_recipe(conn, cursor):
     
     cursor.execute("SELECT name, ingredients, cooking_time, difficulty FROM Recipes WHERE id = %s", (recipe_id,))
     selected_recipe = cursor.fetchone()
-    print("Selected recipe:", selected_recipe)
+    #print("Selected recipe:", selected_recipe)
 
     print("\n  1. Name")
     print("  2. Cooking time")

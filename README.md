@@ -1092,10 +1092,30 @@ Once the user chooses to quit, close `session` and `engine` with their respectiv
 <details>
 <summary><h4>Part 5: Testing</h4></summary>
 
+_Step 1: Create Recipe_
 
+<img src="./Exercise_1.7/part5_step1.png" width="50%">
+
+_Step 2: View All Recipes_
+
+<img src="./Exercise_1.7/part5_step2.png" width="50%">
+
+_Step 3: Search for a Recipe by Ingredient_
+
+<img src="./Exercise_1.7/part5_step3.png" width="50%">
+
+_Step 4: Edit an Existing Recipe_
+
+<img src="./Exercise_1.7/part5_step4.png" width="50%">
+
+_Step 5: Delete a Recipe
+
+<img src="./Exercise_1.7/part5_step5.png" width="50%">
 
 
 </details>
+</details>
+
 
 
 </details>

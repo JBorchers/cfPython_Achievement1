@@ -608,7 +608,7 @@ The output should list all of the availble recipe objects in their entirety, and
 <img src="./Exercise_1.6/part5_step4.png" width="50%">
 
 
-<h3>Part 6: Delete a Recipe with `delete_recipe()</h3>
+<h3>Part 6: Delete a Recipe with delete_recipe()</h3>
 
 <br>_Step 1_<br>
 *	Display all recipes in the Recipe table to the user. User selects a recipe to be deleted by id number.
@@ -669,5 +669,56 @@ The output should list all of the availble recipe objects in their entirety, and
 
 
 
+</details>
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+
+<details>
+<summary><h2>Exercise 1.7: Object-Relational Mapping</h2></summary>
+
+<details>
+<summary><h4>Part 1: Set Up Script and SQLAlchemy</h4></summary>
+
+
+
+
 
 </details>
+
+<details>
+<summary><h4>Part 2: Create Model and Table</h4></summary>
+
+
+
+
+</details>
+
+<details>
+<summary><h4>Part 3: Defining Main Operations as Functions</h4></summary>
+
+
+
+
+</details>
+
+<details>
+<summary><h4>Part 4: Designing the Main Menu</h4></summary>
+
+
+
+
+</details>
+
+<details>
+<summary><h4>Part 5: Testing</h4></summary>
+
+
+
+
+</details>
+
+
+</details>
+

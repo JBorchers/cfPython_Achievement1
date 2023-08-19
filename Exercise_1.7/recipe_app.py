@@ -113,9 +113,9 @@ def create_recipe():
     session.add(recipe_entry)
     session.commit()
     
-    print("\n============================")
-    print(f"{name.upper()} has been saved to the database")
-    print("============================\n")
+
+    print(f"\n\033[92m{name.upper()} has been saved to the database\033[0m")
+    print("\n-------------------------------\n")
 
 
 
@@ -212,9 +212,9 @@ def edit_recipe():
     
     results = session.query(Recipe.id, Recipe.name).all()
     print("\nAvailable recipes:\n")
-    print("============")
+    print("====================")
     for recipe in results:
-        print("Name:", recipe[1], "\nID:", recipe[0], "\n============\n")
+        print("Name:", recipe[1], "\n  ID:", recipe[0], "\n====================")
 
     try:
         recipe_to_edit_id = int(input("\nEnter the ID of a recipe you want to edit: "))
@@ -228,7 +228,7 @@ def edit_recipe():
         print(f"\nEditing: {recipe_to_edit.name.upper()}")
         print(f"{recipe_to_edit}")
 
-        print("Choose the attribute to edit:")
+        print("\nChoose the attribute to edit:")
         print("1. Recipe name")
         print("2. Cooking time")
         print("3. Ingredients")
@@ -259,10 +259,8 @@ def edit_recipe():
         recipe_to_edit.difficulty = updated_difficulty
         session.commit()
 
-
-        print("\n============================")
-        print(f"{recipe_to_edit.name.upper()} has been updated!")
-        print("============================\n")
+        print(f"\n\033[92m{recipe_to_edit.name.upper()} has been updated!\033[0m")
+        print("\n-------------------------------\n")
 
     except ValueError:
         print("\nInvalid input. Please enter a valid option.\n")
@@ -292,14 +290,15 @@ def delete_recipe():
         recipe_to_delete = session.query(Recipe).filter(
             Recipe.id == recipe_id_for_deletion).one()
 
-        confirm = input(
-            f"\nAre you sure you want to remove '{recipe_to_delete.name.upper()}'? (y/n): ").lower()
+        confirm = input(f"\n\033[91mAre you sure you want to remove '{recipe_to_delete.name.upper()}'? (y/n): \033[0m").lower()
         if confirm == "y":
             session.delete(recipe_to_delete)
             session.commit()
-            print(f"'{recipe_to_delete.name}' has been removed.")
+            print(f"\033[91m'{recipe_to_delete.name}' has been removed.\033[0m")
+            print("\n-------------------------------\n")
         else:
-            print("\nDeletion canceled")
+            print("\n\033[91mDeletion canceled\033[0m")
+            print("\n-------------------------------\n")
 
     except ValueError:
         print("Invalid input. Please enter a valid recipe ID.")

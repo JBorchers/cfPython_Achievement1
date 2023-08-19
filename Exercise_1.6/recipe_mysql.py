@@ -61,6 +61,9 @@ def main_menu(conn, cursor):
             elif selection == 5:
                 delete_recipe(conn, cursor)
             elif selection == 6:
+                print("\n| --------------- |")
+                print("|  Happy cooking! |")
+                print("| --------------- |\n")
                 conn.commit()
                 cursor.close()
                 conn.close()
@@ -297,4 +300,3 @@ def delete_recipe(conn, cursor):
         print("\nDeletion canceled")
 
 main_menu(conn, cursor)
-print("Happy cooking!")
